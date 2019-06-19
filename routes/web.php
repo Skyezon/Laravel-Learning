@@ -12,5 +12,5 @@
 */
 Route::get('/posts','WelcomeController@getPosts');
 Route::get('/','WelcomeController@index');
-Route::get('/comment','commentController@getComments');
+Route::get('/comment','CommentController@getComments');
 Route::get('/form','FormController@index');
