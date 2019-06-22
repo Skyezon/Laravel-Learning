@@ -23,17 +23,21 @@
             
         <div class="judul-samping">
             <span>Title :</span>
-            <span>Description :</span>
-            <span>Author :</span>
+            <span>Sinopsis :</span>
+            <span>Release date:</span>
+            <span>Director:</span>
         </div>
        
-    <form class="form-ngetes" action="{{route('post.add')}}" method="POST">
+    <form class="form-ngetes" enctype="multipart/form-data" action="{{route('movie.add')}}" method="POST">
             @csrf
             <input type="text" name="title" placeholder="Enter Title">
-            <input type="text" name="description" placeholder="Enter Decription">
-            <input type="text" name="author" placeholder="Enter Author">
+            <input type="text" name="sinopsis" placeholder="Enter Sinopsis">
+            <input type="text" name="date" placeholder="Enter Date">
+            <input type="text" name="director" placeholder="Enter Director">
+            <input type="file" name="pic" accept="image/*">
             <input type="submit" value="Submit" class="btn">
         </form>
+
     </div>
 
 

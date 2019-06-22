@@ -14,3 +14,7 @@ Route::get('/posts','WelcomeController@getPosts');
 Route::get('/','WelcomeController@index');
 Route::get('/comment','CommentController@getComments');
 Route::get('/form','FormController@index');
+Route::post('/post','FormController@store')->name('post.add');
+Route::get('/form-movie','FormMovieController@index');
+Route::post('/movie','FormMovieController@store')->name('movie.add');
+Route::get('/movie','MovieController@getMovies');

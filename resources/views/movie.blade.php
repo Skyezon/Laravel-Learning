@@ -20,18 +20,19 @@
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Description</th>
-                    <th>Author</th>
+                    <th>Sinopsis</th>
+                    <th>Director</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-               @foreach($posts as $ngetes)
+               @foreach($movies as $ngetes)
                <tr>
                     <td>{{$ngetes->title}}</td>
-                    <td>{{$ngetes->description}}</td>
-                    <td>{{$ngetes->author}}</td>
+                    <td>{{$ngetes->sinopsis}}</td>
+                    <td>{{$ngetes->director}}</td>
+                    <td><img src="{{asset($ngetes->pic)}}"></td>
                     <td>
                         <button class="btn btn-danger">Delete</button>
                     </td>
@@ -42,7 +43,7 @@
                @endforeach
             </tbody>
         </table>
-        {{$posts->links()}}
+        {{$movies->links()}}
     </div>
 </body>
 
