@@ -33,7 +33,7 @@
                     <td>{{$ngetes->title}}</td>
                     <td>{{$ngetes->sinopsis}}</td>
                     <td>{{$ngetes->director}}</td>
-                    <td><img src="{{asset($ngetes->pic)}}" width="100px" height="100px"></td>
+                    <td><img src="{{asset('storage/'.$ngetes->image)}}" width="100px" height="100px"></td>
                     <td>
                         <button class="btn btn-danger">Delete</button>
                     </td>
