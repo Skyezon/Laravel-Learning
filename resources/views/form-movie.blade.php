@@ -34,7 +34,7 @@
             <input type="text" name="sinopsis" placeholder="Enter Sinopsis">
             <input type="text" name="date" placeholder="Enter Date">
             <input type="text" name="director" placeholder="Enter Director">
-            <input type="file" name="pic" accept="image/*">
+            <input type="file" name="pic">
             <input type="submit" value="Submit" class="btn">
         </form>
 
