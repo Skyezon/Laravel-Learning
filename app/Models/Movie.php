@@ -8,6 +8,6 @@ class Movie extends Model
 {
     //
    protected $fillable =[
-    'title','sinopsis','director','date','movie'
+    'title','sinopsis','director','date', 'image', 'movie'
     ];
 }
