@@ -21,12 +21,12 @@ class FormMovieController extends Controller
         // dd($request->file('pic')->storeAs('public/tempatfoto',$filename));
         Storage::put('public/'.$dir, $file);
         // dd(Storage::disk('local')->put($filename,$file));
-        
+        dd($file);
         Movie::create([
             'title' => $request->title,
             'sinopsis' => $request->sinopsis,
             'director' => $request->director,
-            'date' => $request->date,
+            'date' => Carbon::parse($request->date),
             'image' => 'public/'.$dir.'/'.$filename
         ]);
         return redirect('/movie')->with('success','Image succesfully stored');

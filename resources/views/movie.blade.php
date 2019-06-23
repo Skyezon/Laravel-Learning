@@ -22,6 +22,7 @@
                     <th>Title</th>
                     <th>Sinopsis</th>
                     <th>Director</th>
+                    <th>Image</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
@@ -32,7 +33,7 @@
                     <td>{{$ngetes->title}}</td>
                     <td>{{$ngetes->sinopsis}}</td>
                     <td>{{$ngetes->director}}</td>
-                    <td><img src="{{asset($ngetes->pic)}}"></td>
+                    <td><img src="{{asset($ngetes->pic)}}" width="100px" height="100px"></td>
                     <td>
                         <button class="btn btn-danger">Delete</button>
                     </td>
