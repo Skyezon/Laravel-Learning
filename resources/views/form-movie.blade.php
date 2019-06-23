@@ -35,7 +35,7 @@
             <input type="text" name="date" placeholder="Enter Date">
             <input type="text" name="director" placeholder="Enter Director">
             <input type="file" name="pic">
-            <input type="submit" value="Submit" class="btn">
+            <button type="submit" value="Submit" class="btn">
         </form>
 
     </div>

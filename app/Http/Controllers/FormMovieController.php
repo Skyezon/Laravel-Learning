@@ -15,12 +15,16 @@ class FormMovieController extends Controller
         $filename = Carbon::now()->toIso8601String() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
         $dir = 'movies/thumbnails';
         // dd($request->file('pic')->storeAs('public/'.$dir, $filename));
-        // $path = $request->file('pic')->storeAs('public/'.$dir, $filename);
+        // dd($path);
+        $path = $request->file('pic')->storeAs('public/'.$dir, $filename);
         // dd($path);
         // dd($file);
         // dd($request->file('pic')->storeAs('public/tempatfoto',$filename));
-        Storage::put('public/'.$dir, $file);
+        // rename(null,$filename);
+        // Storage::put('public/'.$dir, $file); bisa
         // dd(Storage::disk('local')->put($filename,$file));
+        // $file->storeAs('public/'.$dir.'/', $filename);
+        // $relPathAndName = $file->storePubliclyAs('public/'.$dir,$filename);
         dd($file);
         Movie::create([
             'title' => $request->title,
