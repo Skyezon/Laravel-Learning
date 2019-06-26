@@ -17,4 +17,8 @@ class CommentController extends Controller
         // dd($comments);
         return view('comment',compact('comments'));
     }
+
+    public function add(Request $request){
+        
+    }
 }

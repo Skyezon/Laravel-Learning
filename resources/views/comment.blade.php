@@ -20,8 +20,15 @@
         <br>
         @endforeach
     {{$comments->links()}}
-
     </div>
+    <form class="form-ngetes" action="{{route('post.add')}}" method="POST">
+            @csrf
+            <input type="text" name="title" placeholder="Enter Title">
+            <input type="text" name="comment" placeholder="Enter komen">
+            <input type="text" name="like" placeholder="Enter like">
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    <div>
 </body>
 
 </html>
