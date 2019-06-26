@@ -35,10 +35,16 @@
                     <td>{{$ngetes->director}}</td>
                     <td><img src="{{asset('storage/'.$ngetes->image)}}" width="100px" height="100px"></td>
                     <td>
-                        <button class="btn btn-danger">Delete</button>
+                    <form action="{{route('movie.delete',$ngetes->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit">Delete</button>                                                
+                    </form>
+
                     </td>
                     <td>
-                    <button class="btn btn-success">edit</button>                    
+                    {{-- <button class="btn btn-success" >edit</button>                     --}}
+                    <a class="btn btn-success" href="{{route('movie.edit',$ngetes->id)}}">Update</a>
                     </td>
                 </tr>
                @endforeach

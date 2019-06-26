@@ -18,3 +18,6 @@ Route::post('/post','FormController@store')->name('post.add');
 Route::get('/form-movie','FormMovieController@index');
 Route::post('/movie','FormMovieController@store')->name('movie.add');
 Route::get('/movie','MovieController@getMovies');
+Route::get('/movie/{id}','MovieController@edit')->name('movie.edit');
+Route::patch('/movie/{id}','MovieController@update')->name('movie.update');
+Route::Delete('/movie/{id}','MovieController@delete')->name('movie.delete');

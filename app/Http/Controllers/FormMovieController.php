@@ -14,7 +14,8 @@ class FormMovieController extends Controller
         $file = $request->file('pic');
         $filename = (strtotime(Carbon::now()) * 1000). '_' . uniqid() . '.' . $file->getClientOriginalExtension();
         $dir = 'movies/thumbnails';
-        $request->file('pic')->storeAs('public/'.$dir, $filename);
+        $file->storeAs('public/'.$dir, $filename);
+
         Movie::create([
             'title' => $request->title,
             'sinopsis' => $request->sinopsis,
