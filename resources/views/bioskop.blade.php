@@ -53,7 +53,7 @@
                @endforeach
             </tbody>
         </table>
-        {{$movies->links()}}
+        {{$bioskops->links()}}
     </div>
 </body>
 

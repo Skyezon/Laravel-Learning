@@ -23,7 +23,8 @@
                     <th>Sinopsis</th>
                     <th>Director</th>
                     <th>Image</th>
-                    <th>bioskop</th>
+                    <th>Nama Bioskop</th>
+                    <th>Lokasi Bioskop</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
@@ -35,6 +36,8 @@
                     <td>{{$ngetes->sinopsis}}</td>
                     <td>{{$ngetes->director}}</td>
                     <td><img src="{{asset('storage/'.$ngetes->image)}}" width="100px" height="100px"></td>
+                    <td>{{$ngetes->bioskop->nama}} </td>
+                    <td>{{$ngetes->bioskop->lokasi}} </td>
                     <td>
                     <form action="{{route('movie.delete',$ngetes->id)}}" method="POST">
                         @csrf

@@ -35,11 +35,11 @@
             <input type="text" name="date" placeholder="Enter Date">
             <input type="text" name="director" placeholder="Enter Director">
             <input type="file" name="pic">
-            <select name="cat" id="">
+            {{-- <select name="cat" id="">
                     @foreach ($bioskops as $bioskop)
                 <option value="{{$bioskop->id}}">{{$bioskop->lokasi}}</option>   
                     @endforeach
-                </select>
+                </select> --}}
             <button type="submit" value="Submit" class="btn">
         </form>
 

@@ -10,6 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/bioskop','BioskopController@getBioskop');
+Route::Delete('/bioskop/{id}','BioskopController@delete')->name('bioskop.delete');
+Route::get('/bioskop/{id}','BioskopController@edit')->name('bioskop.edit');
+Route::get('/bioskop/form','FormBioskopController@Index');
+// Route::patch('/bioskop/form-update','FormBioskopController@update');
+Route::post('/bioskop/form','FormBioskopController@store')->name('bioskop.add');
+
+
 Route::get('/posts','WelcomeController@getPosts');
 Route::get('/','WelcomeController@index');
 Route::get('/comment','CommentController@getComments');
@@ -24,9 +33,3 @@ Route::Delete('/movie/{id}','MovieController@delete')->name('movie.delete');
 Route::post('/comment','CommentController@store')->name('comment.add');
 Route::get('/movie/show/{id}','MovieController@show')->name('movie.show');
 
-Route::get('/bioskop','BioskopController@getBioskop');
-Route::Delete('/bioskop/{id}','BioskopController@delete')->name('bioskop.delete');
-Route::get('/bioskop/{id}','BioskopController@edit')->name('bioskop.edit');
-Route::get('/bioskop/form','FormBioskopController@show')->name('bioskop.show');
-// Route::patch('/bioskop/form-update','FormBioskopController@update');
-Route::post('/bioskop/form','FormBioskopController@store')->name('bioskop.add');

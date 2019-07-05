@@ -8,7 +8,8 @@ use App\Models\Bioskop;
 
 class FormBioskopController extends Controller
 {
-    public function show(){
+    public function Index(){
+        // dd('test');
         return view('form-bioskop');
     }
 
