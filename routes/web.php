@@ -15,7 +15,7 @@ Route::get('/bioskop','BioskopController@getBioskop');
 Route::Delete('/bioskop/{id}','BioskopController@delete')->name('bioskop.delete');
 Route::get('/bioskop/{id}','BioskopController@edit')->name('bioskop.edit');
 Route::get('/bioskop/form','FormBioskopController@Index');
-// Route::patch('/bioskop/form-update','FormBioskopController@update');
+Route::patch('/bioskop/form-update/{id}','FormBioskopController@update')->name('bioskop.update');
 Route::post('/bioskop/form','FormBioskopController@store')->name('bioskop.add');
 
 
