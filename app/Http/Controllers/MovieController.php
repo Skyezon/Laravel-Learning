@@ -40,4 +40,10 @@ class MovieController extends Controller
         Movie::destroy($id);
         return back()->with('success','Sucess delete movie data');
     }
+
+    public function show($id){
+        $movie = Movie::findOrFail($id);
+        
+        return view('show-movie',compact('movie'));
+    }
 }

@@ -6,6 +6,7 @@ use App\Http\Requests\MovieRequest;
 use App\Models\Movie;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Bioskop;
 
 class FormMovieController extends Controller
 {
@@ -28,7 +29,8 @@ class FormMovieController extends Controller
 
     public function index()
     {
-        return view('form-movie');
+        $bioskops = Bioskop::all();
+        return view('form-movie','bioskops');
     }
 
 }

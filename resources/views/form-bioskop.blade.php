@@ -22,24 +22,14 @@
     <div class="container-buat">
             
         <div class="judul-samping">
-            <span>Title :</span>
-            <span>Sinopsis :</span>
-            <span>Release date:</span>
-            <span>Director:</span>
+            <span>Nama :</span>
+            <span>Lokasi :</span>
         </div>
        
     <form class="form-ngetes" enctype="multipart/form-data" action="{{route('movie.add')}}" method="POST">
             @csrf
-            <input type="text" name="title" placeholder="Enter Title">
-            <input type="text" name="sinopsis" placeholder="Enter Sinopsis">
-            <input type="text" name="date" placeholder="Enter Date">
-            <input type="text" name="director" placeholder="Enter Director">
-            <input type="file" name="pic">
-            <select name="cat" id="">
-                    @foreach ($bioskops as $bioskop)
-                <option value="{{$bioskop->id}}">{{$bioskop->lokasi}}</option>   
-                    @endforeach
-                </select>
+            <input type="text" name="nama" placeholder="Enter Title">
+            <input type="text" name="lokasi" placeholder="Enter Sinopsis">
             <button type="submit" value="Submit" class="btn">
         </form>
 

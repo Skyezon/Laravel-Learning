@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comment;
+use App\Models\Movie;
 
 class CommentController extends Controller
 {
@@ -13,12 +14,19 @@ class CommentController extends Controller
     }
 
     public function getComments(){
+        $movies = Movie::all();
         $comments = Comment::paginate(6);
         // dd($comments);
-        return view('comment',compact('comments'));
+        return view('comment',compact('comments','movies'));
     }
 
-    public function add(Request $request){
-        
+    public function store(Request $request){
+        Comment::Create([
+            'title'=>$request->title, 
+            'isi'=>$request->comment, 
+            'angka'=>$request->like,
+            'movie_id' => $request->cat
+        ]);
     }
+
 }

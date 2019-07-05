@@ -19,24 +19,26 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Sinopsis</th>
-                    <th>Director</th>
-                    <th>Image</th>
-                    <th>bioskop</th>
+                    <th>Nama</th>
+                    <th>Lokasi</th>
+                    <th>Film-film</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-               @foreach($movies as $ngetes)
+               @foreach($bioskops as $ngetes)
                <tr>
-                    <td>{{$ngetes->title}}</td>
-                    <td>{{$ngetes->sinopsis}}</td>
-                    <td>{{$ngetes->director}}</td>
-                    <td><img src="{{asset('storage/'.$ngetes->image)}}" width="100px" height="100px"></td>
+                    <td>{{$ngetes->nama}}</td>
+                   <td>{{$ngetes->lokasi}}</td>
+                   <td>
+                       @foreach ($ngetes->movie as $movie)
+                           {{$movie->name}}
+                           <br/>
+                       @endforeach
+                   </td>
                     <td>
-                    <form action="{{route('movie.delete',$ngetes->id)}}" method="POST">
+                    <form action="{{route('bioskop.delete',$ngetes->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Delete</button>                                                
@@ -45,7 +47,7 @@
                     </td>
                     <td>
                     {{-- <button class="btn btn-success" >edit</button>                     --}}
-                    <a class="btn btn-success" href="{{route('movie.edit',$ngetes->id)}}">Update</a>
+                    <a class="btn btn-success" href="{{route('bioskop.edit',$ngetes->id)}}">Update</a>
                     </td>
                 </tr>
                @endforeach

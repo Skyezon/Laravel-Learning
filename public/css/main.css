@@ -32,3 +32,23 @@ body{
 .form-ngetes > input{
     margin: 1rem;
 }
+
+.description{
+    padding: 15px;
+    border: 1px solid salmon;
+    background-color: black;
+    width: 20%;
+    display: block;   
+    margin: auto;
+    margin-top: 30px;
+    color: white;
+    border-radius: 1rem;
+}
+
+.content{
+    background: white;
+    width: 30%;
+    border: 1px solid purple;
+    border-radius: 20px;
+    padding: 20px;
+}
